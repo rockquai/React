@@ -365,5 +365,5 @@ console.log(j);  // (1) j is not defined
 
 ```js
 const PI = 3.141593;
-PI = 3.14;         // (1) Uncaught TypeError: Assignment to constant variable.
+PI = 3.14;  // (1) Uncaught TypeError: Assignment to constant variable.
 ```
