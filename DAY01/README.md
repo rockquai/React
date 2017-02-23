@@ -40,30 +40,30 @@
 - 여러개의 script 파일을 하나로 묶어준다.
 
 #### [webpack] (https://webpack.github.io/)
-: bundler
-: 여러개의 script 파일을 하나로 묶어준다.
-: gulp에서 사용하고 있는 기능들을 webpack으로 가져오고 있다
-: 모듈을 사용한다.
-: commonJS 기반이다.
+- bundler
+- 여러개의 script 파일을 하나로 묶어준다.
+- gulp에서 사용하고 있는 기능들을 webpack으로 가져오고 있다
+- 모듈을 사용한다.
+- commonJS 기반이다.
  
 #### [RequireJS] (http://requirejs.org/)
-: AMD, Javascripts 파일(모듈) 로더 라이브러리
-: 의존성 주입이 강력. 
-: 대형 프로젝트에 많이 사용
-: node에서 사용 안함
+- AMD, Javascripts 파일(모듈) 로더 라이브러리
+- 의존성 주입이 강력. 
+- 대형 프로젝트에 많이 사용
+- node에서 사용 안함
 
 ##### [AMD] (https://github.com/amdjs/amdjs-api/blob/master/AMD.md)
 - 동적 로딩, 의존성 관리, 모듈화가 톱니바퀴처럼 아름답게 맞물린 API 디자인 제시.
-- AMD의 근간이 되는 3가지 개념
-    - `동적 로딩`  UI 초기 구현에 필요한 파일만 먼저 불러오고, 나머지는 필요에 따라 개별 호출한다.
-    - `의존성 관리`  JS 파일간 의존성 관리를 명시적으로 하여야 한다.
-    - `모듈화` 전역 공간을 오염시키지 않아 JS 파일 간 충돌로 인한 오류를 사전에 방지한다.
+- AMD의 근간이 되는 3가지 개념 <br>
+    - `동적 로딩`  UI 초기 구현에 필요한 파일만 먼저 불러오고, 나머지는 필요에 따라 개별 호출한다. <br>
+    - `의존성 관리`  JS 파일간 의존성 관리를 명시적으로 하여야 한다. <br>
+    - `모듈화` 전역 공간을 오염시키지 않아 JS 파일 간 충돌로 인한 오류를 사전에 방지한다. <br>
 
 #### [CommonJS] (http://www.commonjs.org/)
-: nodeJS는 commonJS 기반.
-: 동기방식
-: 불러오는 순서대로
-: node에서 사용
+- nodeJS는 commonJS 기반.
+- 동기방식
+- 불러오는 순서대로
+- node에서 사용
 
 ### git
 - [(gui) sourceTree 설치](https://www.sourcetreeapp.com/)
