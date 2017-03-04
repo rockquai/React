@@ -1,0 +1,33 @@
+# Gulp
+node_modules
+bower_components
+
+# 포토샵 파일
+*.psd
+
+# SASS
+## SASS 캐시 파일 & Sourcemap
+.sass-cache
+*.css.map
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
