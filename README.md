@@ -1,6 +1,6 @@
 ###### React Study
 
-#INDEX
+# INDEX
 
 - [DAY01](./DAY01/README.md) 
 	- 프론트엔드 개발 도구

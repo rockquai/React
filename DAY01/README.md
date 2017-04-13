@@ -12,21 +12,21 @@
 - ES6
 
 ### 프론트엔드 개발 도구 
-#### [npm] (https://www.npmjs.com/) 
+#### [npm](https://www.npmjs.com/) 
 - A package manager for javascript 
 
-#### [bower] (https://bower.io/) 
+#### [bower](https://bower.io/) 
 - A package manager for the web
 - component 관리 
 - html, css, script, img 관리
 - 설치는 npm 으로 설치해야 되고... 경로가 꼬이는 경우가 발생
 
-#### [Grunt] (http://gruntjs.com/)
+#### [Grunt](http://gruntjs.com/)
 - 업무 자동화(Automate Tasks)
 - The JavaScript Task Runner
 - 설정이 어렵고, 업데이트가 잘 안된다. 지금은 잘 사용 안함
 
-#### [gulp] (http://gulpjs.com/)
+#### [gulp](http://gulpjs.com/)
 - 업무 자동화(Automate Tasks)
 - Automate and enhance your workflow
 - `Grunt`보다 1년 뒤에 나옴.
@@ -35,31 +35,31 @@
 - 확장성이 있다.
 - sass -> css 변환
 
-#### [browserify] (http://browserify.org/)
+#### [browserify](http://browserify.org/)
 - bundler
 - 여러개의 script 파일을 하나로 묶어준다.
 
-#### [webpack] (https://webpack.github.io/)
+#### [webpack](https://webpack.github.io/)
 - bundler
 - 여러개의 script 파일을 하나로 묶어준다.
 - gulp에서 사용하고 있는 기능들을 webpack으로 가져오고 있다
 - 모듈을 사용한다.
 - commonJS 기반이다.
  
-#### [RequireJS] (http://requirejs.org/)
+#### [RequireJS](http://requirejs.org/)
 - AMD, Javascripts 파일(모듈) 로더 라이브러리
 - 의존성 주입이 강력. 
 - 대형 프로젝트에 많이 사용
 - node에서 사용 안함
 
-##### [AMD] (https://github.com/amdjs/amdjs-api/blob/master/AMD.md)
+##### [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)
 - 동적 로딩, 의존성 관리, 모듈화가 톱니바퀴처럼 아름답게 맞물린 API 디자인 제시.
 - AMD의 근간이 되는 3가지 개념 <br>
     - `동적 로딩`  UI 초기 구현에 필요한 파일만 먼저 불러오고, 나머지는 필요에 따라 개별 호출한다. <br>
     - `의존성 관리`  JS 파일간 의존성 관리를 명시적으로 하여야 한다. <br>
     - `모듈화` 전역 공간을 오염시키지 않아 JS 파일 간 충돌로 인한 오류를 사전에 방지한다. <br>
 
-#### [CommonJS] (http://www.commonjs.org/)
+#### [CommonJS](http://www.commonjs.org/)
 - nodeJS는 commonJS 기반.
 - 동기방식
 - 불러오는 순서대로
@@ -79,7 +79,7 @@ $ npm -v
 $ [sudo] npm i -g npm webpack babel-core
 ```
 
-### [npm] (https://www.npmjs.com/) 
+### [npm](https://www.npmjs.com/) 
 
 ```bash
 $ [sudo] npm install --global npm
@@ -209,7 +209,7 @@ $ npm un jquery@1.12.3 // 특정한 버전으로 설치를 할 있다
 
 ### [babeljs.io](https://babeljs.io/)
 - Use next generation JavaScript, today.
-- [compat table] (http://kangax.github.io/compat-table/es5/)
+- [compat table](http://kangax.github.io/compat-table/es5/)
 
 ```js
 //------ .babelrc ------
@@ -247,7 +247,7 @@ console.log([1,2,3].map(n => n + 1));
 > babel test.js -d bundle
 ```
 
-### [webpack] (https://webpack.github.io/)
+### [webpack](https://webpack.github.io/)
 - [webpack module bundler](https://webpack.github.io/)
 - [javascript 모듈화도구 webpack](http://d2.naver.com/helloworld/0239818)
 - [초보자용 webpack 튜토리얼 part1](https://firejune.com/1798/%EC%B4%88%EB%B3%B4%EC%9E%90%EC%9A%A9+Webpack+%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC+%ED%8C%8C%ED%8A%B81+-+Webpack+%EC%9E%85%EB%AC%B8)

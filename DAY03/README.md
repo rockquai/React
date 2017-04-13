@@ -23,7 +23,7 @@
 - 시각적 요소(visibility, outline, background-color 등)가 표현되는 과정
 - 예) 버튼에 마우스 오버시 컬러 변화 
 
-> [Reflow와 Repaint] (https://github.com/nhnent/fe.javascript/wiki/Reflow%EC%99%80-Repaint)
+> [Reflow와 Repaint](https://github.com/nhnent/fe.javascript/wiki/Reflow%EC%99%80-Repaint)
 
 ### Virtual DOM
 - React의 Virtual DOM을 통해 `reflow를 최소화`하여 비용을 발생 시키지 않는다. 효율적. 
