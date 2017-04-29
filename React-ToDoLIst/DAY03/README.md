@@ -4,7 +4,6 @@
 
 ## React 기초 1
 - reflow & repaint
-- Setting
 - Component
 - ReactDOM.render(VirtualDOM, targetElement)
 - jsx 문법
@@ -15,18 +14,18 @@
 ### reflow & repaint
 #### reflow
 - 좌표, 위치를 계산
-- `reflow`가 최소화 되어야 성능이 좋다. good performance! 
+- `reflow`가 최소화 되어야 성능이 좋다. good performance!
 - 예) Hamburger button : 전체적으로 좌표 위치가 계산 되어 reflow 많이 발생 (Animations)
 - 예) 네이버 검색창 : 자동완성기능 영역만 reflow 발생이 되어 reflow가 최소화
 
 #### repaint
 - 시각적 요소(visibility, outline, background-color 등)가 표현되는 과정
-- 예) 버튼에 마우스 오버시 컬러 변화 
+- 예) 버튼에 마우스 오버시 컬러 변화
 
-> [Reflow와 Repaint](https://github.com/nhnent/fe.javascript/wiki/Reflow%EC%99%80-Repaint)
+> [Reflow와 Repaint] (https://github.com/nhnent/fe.javascript/wiki/Reflow%EC%99%80-Repaint)
 
 ### Virtual DOM
-- React의 Virtual DOM을 통해 `reflow를 최소화`하여 비용을 발생 시키지 않는다. 효율적. 
+- React의 Virtual DOM을 통해 `reflow를 최소화`하여 비용을 발생 시키지 않는다. 효율적.
 
 ```js
 $('#a').text('bbb');
@@ -153,13 +152,13 @@ ReactDOM.render(
 ```
 
 ### jsx 문법
-- 기본 xml 
+- 기본 xml
 - nested Element : 최상단에는 반드시 하나의 엘리먼트만 존재해야 한다. 즉, 여러 형제요소들은 반드시 부모요소로 감싸야 한다.
 - 모든 태그는 닫는 태그가 존재해야 한다.
 - 모든 태그는 단일태그로도 표현이 가능하다. (ex. `<div></div>` === `<div />`)
 - 리액트 컴포넌트를 태그처럼 사용할 수 있다. (ex. `<Parent> <Child /> </Parent>`)
 - 리액트 컴포넌트는 html 태그와 구분하기 위해 관행적으로 첫글자를 대문자로 써준다.
-- 주석은 {/* ... */} 식으로, container의 안쪽에서만 가능.
+- 주석은 `{/* ... */}` 식으로, container의 안쪽에서만 가능.
 - 표현식 처리 : { }으로 감싸준다. ('문'형태는 불가!) => '문'형태 : for, if... 반환값이 없기 때문에 불가. 함수는 가능, 객체, 숫자, 문자 가능.
 - html의 hyphens -> camelCase 로 표기해야 한다. => font-size를 fontSize로 표기해아 한다.
 - class => className 표기해야 한다. ES6의 class가 있기 때문에.
@@ -267,7 +266,7 @@ Child.defaultProps = {
 };
 ```
 
-### state : 내가 만든 데이터. 
+### state : 내가 만든 데이터.
 컴포넌트 내부에서 값을 변경, 활용하기 위한 데이터. 클릭에 따른 토글상태값 기억 등 국소범위만을 위한 데이터에 유용.
 - parent 컴포넌트에 의해 값이 변경되지 않음.
 - 컴포넌트 내부에서 값 변경 가능.
@@ -313,6 +312,9 @@ React의 data flow는 위에서 아래로 흐르는 일방통행이 원칙!
 
 ```js
 //----- Parent.js -----
+import React from 'react';
+import Child from './Child';
+
 class Parent extends React.Component {
   constructor(props) {
     super(props);
@@ -333,7 +335,7 @@ class Parent extends React.Component {
     };
   }
   handleClick(i) {
-    console.log(this.state);
+    // console.log(this.state);
     const newPeople = this.state.people;
     newPeople[i].show = !newPeople[i].show;
     this.setState({
@@ -342,34 +344,29 @@ class Parent extends React.Component {
   }
   render() {
     const people = this.state.people;
+    const children = people.map(({name, phone, show}, index) => (
+        <Child
+          key={index}
+          name={ name }
+          phone={ phone }
+          show={ show }
+          handleClick={this.handleClick.bind(this, index)}
+        />
+    ));
     return (
-      <ul>
-        <Child
-          name={ people[0].name }
-          phone={ people[0].phone }
-          show={ people[0].show }
-          handleClick={this.handleClick.bind(this, 0)}
-        />
-        <Child
-          name={ people[1].name }
-          phone={ people[1].phone }
-          show={ people[1].show }
-          handleClick={this.handleClick.bind(this, 1)}
-        />
-        <Child
-          name={ people[2].name }
-          phone={ people[2].phone }
-          show={ people[2].show }
-          handleClick={this.handleClick.bind(this, 2)}
-        />
+      <ul className="list">
+        {children}
       </ul>
     );
   }
 }
+export default Parent;
 ```
 
 ```js
 //----- Child.js -----
+import React from 'react';
+
 class Child extends React.Component {
   render() {
     const { name, phone, show, handleClick } = this.props;
@@ -385,4 +382,6 @@ class Child extends React.Component {
     );
   }
 }
+
+export default Child;
 ```
